@@ -2,10 +2,46 @@
 //
 
 #include <iostream>
+#include <string>
+#include <algorithm>
+
+
+using namespace std;
+
+void IPadress() {
+    const int s = 12;
+    string ip = "123.564.251";
+    //cout << "Введите IP-адресс: " << endl;
+    //cin >> ip;
+    //string ip[];
+    string f1 = ".";
+    string f2 = "[.]";
+    int pos;
+    //for (int i = 0; i < ip.length(); i++) {
+        
+        //cout << "pos = " << pos << " f2 = " << f2 << endl;
+    //}
+    
+    int k = 0;
+
+   while(k<1) {
+        pos = ip.find(f1);
+        ip.replace(pos, 1, f2);
+        k++;
+    }
+
+   while (k < 1) {
+       pos = ip.find(f1);
+       ip.replace(pos, 1, f2);
+       k++;
+   }
+
+   cout << ip;
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    IPadress();
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
